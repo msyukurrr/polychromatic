@@ -50,70 +50,76 @@ export default function Polychromatic() {
   }, []);
 
   return (
-    <div className="bg-blue-200">
-      <h1 className="text-3xl font-bold text-center mb-8 py-4 text-lime-600">
+    <div className='polyBody'>
+
+      <div className='headPolyDiv'>
+        <h1 className="headPoly">
         Polychromatic
-      </h1>
+         </h1>
+      </div>
+
+
       <div>
-        <div className="flex flex-col items-center justify-center">
-          <div className="bg-lime-600 rounded-lg shadow-lg p-4">
+        <div className="bigImageDiv">
+          <div className="bigImage">
             <Image
               src={image}
               alt={image}
-              width={200}
-              height={200}
-              className="rounded-lg"
+              width={500}
+              height={500}
             />
           </div>
-          <div className="mt-5 text-center">
-            <div className="font-medium">{time}</div>
-            <div className="text-lime-500">
-              {coords[0]}, {coords[1]}
-            </div>
+          <div className="textDiv">
+              <div className="dateText">{time}</div>
+              <div className="coordText">
+                {coords[0]}, {coords[1]}
+              </div>
+              </div>
           </div>
-        </div>
 
-        <table className="min-w-full divide-y divide-gray-200">
-          <thead className="bg-blue-500">
+        <table className="tableDiv">
+          <thead className="tableHead">
             <tr>
-              <th className="px-6 py-3 text-left text-xs font-medium text-lime-100 uppercase tracking-wider">
+              <th className="timeText">
                 Time
               </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-lime-100 uppercase tracking-wider">
-                Lattitude
+              <th className="latText">
+                Latitude
               </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-lime-100 uppercase tracking-wider">
+              <th className="longText">
                 Longitude
               </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-lime-100 uppercase tracking-wider">
+              <th className="imgText">
                 Image
               </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-lime-100 uppercase tracking-wider">
+              <th className="viewText">
                 View
               </th>
             </tr>
           </thead>
-          <tbody className="bg-white divide-y divide-gray-200">
+
+          
+          <tbody>
             {images &&
               images.map((o, index) => {
                 return (
                   <tr key={index}>
-                    <td className="px-6 py-4 whitespace-nowrap bg-blue-200">{o.time}</td>
-                    <td className="px-6 py-4 whitespace-nowrap bg-blue-200">
+                    <td className="column">{o.time}</td>
+                    <td className="column">
                       {o.coords.lat}
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap bg-blue-200">
+                    <td className="column">
                       {o.coords.lon}
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap bg-blue-200">
+                    <td className="column">
                       <Image
                         src={o.image}
                         alt={o.image}
-                        width={100}
-                        height={100}
+                        width={150}
+                        height={150}
                       />
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap bg-blue-200">
+                    <td className="column">
                       <button
                         onClick={() => {
                           setImage(o.image);
@@ -121,7 +127,7 @@ export default function Polychromatic() {
                           setCoords([o.coords.lat, o.coords.lon]);
                           document.body.scrollIntoView({ behavior: "smooth" });
                         }}
-                        className="bg-lime-600 hover:bg-blue-700 text-black font-bold py-3 px-6 rounded"
+                        className="viewButton"
                       >
                         View
                       </button>

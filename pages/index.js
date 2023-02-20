@@ -28,32 +28,40 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      
       <main className="main">
-        <Link className='name' href="/polychromatic">polychromatic</Link>
-        <div className='mainCont'>
-      {
-        data && data.results.map((tech, index) => {
-          return (
+        <div className='polyDiv' >
+        <button className='polyButton'>
+          <Link href="/polychromatic">Polychromatic</Link>
+        </button>
+
+
+        </div>
+           <div className='mainCont'>
+              {
+                  data && data.results.map((tech, index) => {
+                  return (
               
-            <div className='Maindev' key={index}>
-                {
-                  tech && tech.map((t, ind) => {
-                    if(ind ===10){
-                      return (
-                        <Image className='image' src={t}
-                        alt={t}
-                        key={ind}
-                        width={100}
-                        height={100}
-                        />
+                       <div className='homeImages' key={index}>
+                           {
+                                tech && tech.map((t, ind) => {
+                                 if(ind ===10){
+                                 return (
+                                 <Image className='images' src={t}
+                                   alt={t}
+                                   key={ind}
+                                   width={200}
+                                   height={200}
+                                 />
+                                 )
+                               }
+                             })
+                           }
+                      </div>
                         )
-                      }
-                    })
-                  }
-            </div>
-          )
-        })
-      }
+                 })
+             }
       </div>
       </main>
     </>
