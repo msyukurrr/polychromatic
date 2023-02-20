@@ -1,5 +1,164 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6rem;
+    min-height: 100vh;
+    background-image: url('../public/space.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .mainCont{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 20px;
+    margin-top: 20px;
+  }
+
+  .homeImages {
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .images {
+    display: flex;
+  }
+
+  .HomeImages:hover{
+    background-color: #59A5D8;
+  }
+
+  .polyDiv{
+    background-color:#386FA4;
+    width: 450px;
+    display:flex;
+    justify-content: center;
+    border-radius: 20px;
+  }
+  
+.polyButton{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-color:#386FA4;
+  height: 80px;
+  width: 200px;
+  color: #84D2F6;
+  font-size: 30px;
+  font-family: 'Press Start 2P'
+}
+
+.polyButton:hover{
+  background-color: #133C55;
+}
+
+.polyDiv:hover{
+  background-color: #133C55;
+}
+
+.polyBody{
+  background-image:url('../public/space.jpg')
+}
+.bigImageDiv{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.textDiv{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dateText{
+  font-weight: bold;
+  color:#133C55;
+}
+
+.coordText{
+  color:#3A9BDC;
+}
+
+
+.headPoly {
+  font-family:'Press Start 2P';
+  display:flex;
+  justify-content: center;
+  font-size: 40px;
+  color: #386FA4;
+}
+
+.headPolyDiv{
+  height: 70px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.tableDiv{
+  min-width: 100%;
+}
+
+.tableHead{
+  background-color: #133C55;
+  height: 50px;
+  
+}
+
+.timeText{
+  text-align: left;
+  color:white;
+  font-family: 'Press Start 2P';
+}
+
+.latText{
+  text-align: left;
+  color:white;
+  font-family: 'Press Start 2P';
+}
+
+.longText{
+  text-align: left;
+  color:white;
+  font-family: 'Press Start 2P';
+}
+
+.imgText{
+  text-align: left;
+  color:white;
+  font-family: 'Press Start 2P';
+}
+
+.viewText{
+  text-align: left;
+  color:white;
+  font-family: 'Press Start 2P';
+}
+
+.column{
+  padding: 10px;
+  flex-wrap:nowrap;
+  background-color: black;
+  color: white;
+}
+
+.viewButton{
+  background-color: #386FA4;
+  height: 30px;
+  width: 90px;
+  border-radius: 15px;
+  color: white;
+  font-family: 'Press Start 2P';
+}
+
+
+
+  
+  
